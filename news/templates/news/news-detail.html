@@ -1,0 +1,11 @@
+{% extends 'main/container.html' %}
+{% block content %}
+<article>
+  <h3>{{detail.title}}</h3>
+  <h6>{{detail.date | date:'d-m-Y H:i:s'}}</h6>
+  <p>{{detail.body | safe}}</p>
+</article>
+<div>
+  <a href="/news">Back to News</a>
+</div>
+{% endblock %}

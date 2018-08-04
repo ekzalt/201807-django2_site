@@ -1,0 +1,13 @@
+{% extends 'main/container.html' %}
+{% block content %}
+  {% for article in articles %}
+    <article>
+      <header>
+        <a href="/news/{{article.id}}">
+          <h3>{{article.title}}</h3>
+        </a>
+      </header>
+      <h6>{{article.date | date:'d-m-Y H:i:s'}}</h6>
+    </article>
+  {% endfor %}
+{% endblock %}
